@@ -1,0 +1,58 @@
+NAME
+
+XML::Parser::Lite - Lightweight regexp-based XML parser
+
+SYNOPSIS
+
+  use XML::Parser::Lite;
+  
+  $p1 = new XML::Parser::Lite;
+  $p1->setHandlers(
+    Start => sub { shift; print "start: @_\n" },
+    Char => sub { shift; print "char: @_\n" },
+    End => sub { shift; print "end: @_\n" },
+  );
+  $p1->parse('<foo id="me">Hello World!</foo>');
+
+  $p2 = new XML::Parser::Lite
+    Handlers => {
+      Start => sub { shift; print "start: @_\n" },
+      Char => sub { shift; print "char: @_\n" },
+      End => sub { shift; print "end: @_\n" },
+    }
+  ;
+  $p2->parse('<foo id="me">Hello <bar>cruel</bar> World!</foo>');
+
+DESCRIPTION
+
+This Perl module gives you access to XML parser with interface similar to 
+XML::Parser interface. Though only basic calls are supported (init, final, 
+start, char, and end) you should be able to use it in the same way you use 
+XML::Parser. Due to using experimantal regexp features it'll work only on Perl 
+5.6 and may behave differently on different platforms.
+
+SEE ALSO
+
+XML::Parser
+
+COPYRIGHT
+
+Copyright (C) 2000-2001 Paul Kulchenko. All rights reserved.
+
+This library is free software; you can redistribute it and/or modify it under 
+the same terms as Perl itself.
+
+This parser is based on "shallow parser" http://www.cs.sfu.ca/~cameron/REX.html 
+Copyright (c) 1998, Robert D. Cameron.
+
+AUTHOR
+
+Paul Kulchenko (paulclinger@yahoo.com)
+
+MAINTAINER
+
+This module and accompanying test file were extracted from L<SOAP::Lite> by 
+Earle Martin (hex at cpan dot org) without any involvement in the actual code.
+PLEASE REPORT BUGS TO THE SOAP::LITE MAINTAINERS VIA THE SOAP::LITE QUEUE
+(http://rt.cpan.org/Public/Dist/Display.html?Name=SOAP-Lite). I will try and
+reflect relevant changes in this distribution as they are made.

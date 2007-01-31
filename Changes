@@ -1,0 +1,13 @@
+Change history for: XML::Parser::Lite
+
+	0.66 (Jan 31, 2007)
+		Extracted from SOAP::Lite to be a distribution of its own. Updated
+		version number to 0.66 from 0.65_3 to distinguish it.
+		
+As part of SOAP::Lite:
+
+	0.51 (Jul 18, 2001)
+		modified XML::Parser::Lite to work on Perl 5.005 (thanks to John Gotts)
+
+	0.50 (Apr 18, 2001)
+		added XML::Parser::Lite, regexp-based XML parser
