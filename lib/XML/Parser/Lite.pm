@@ -12,7 +12,7 @@ package XML::Parser::Lite;
 use strict;
 use warnings;
 
-our $VERSION = 0.719;
+our $VERSION = 0.720;
 
 sub new {
     my $class = shift;
@@ -343,6 +343,12 @@ cleanup here.
 =head1 SEE ALSO
 
  XML::Parser
+
+ XML::Parser::LiteCopy: a fork in XML::Parser::Lite::Tree
+
+ YAX
+
+ XML::Parser::REX: the almost original REX code
 
 =head1 COPYRIGHT
 

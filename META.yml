@@ -20,4 +20,4 @@ no_index:
 requires: {}
 resources:
   repository: https://github.com/redhotpenguin/perl-XML-Parser-Lite
-version: 0.719
+version: 0.72
